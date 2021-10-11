@@ -1,0 +1,7 @@
+c:\users\aiko\source\repos\FirstDay\FirstDay\bin\Debug\FirstDay.exe.config
+c:\users\aiko\source\repos\FirstDay\FirstDay\bin\Debug\FirstDay.exe
+c:\users\aiko\source\repos\FirstDay\FirstDay\bin\Debug\FirstDay.pdb
+c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.csprojAssemblyReference.cache
+c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.csproj.CoreCompileInputs.cache
+c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.exe
+c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.pdb
