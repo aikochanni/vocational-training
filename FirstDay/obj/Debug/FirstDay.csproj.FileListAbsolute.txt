@@ -5,3 +5,10 @@ c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.csprojAssemblyRe
 c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.csproj.CoreCompileInputs.cache
 c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.exe
 c:\users\aiko\source\repos\FirstDay\FirstDay\obj\Debug\FirstDay.pdb
+E:\Pulpit\vocational-training-master\FirstDay\obj\Debug\FirstDay.csprojAssemblyReference.cache
+E:\Pulpit\vocational-training-master\FirstDay\obj\Debug\FirstDay.csproj.CoreCompileInputs.cache
+E:\Pulpit\vocational-training-master\FirstDay\obj\Debug\FirstDay.exe
+E:\Pulpit\vocational-training-master\FirstDay\obj\Debug\FirstDay.pdb
+E:\Pulpit\vocational-training-master\FirstDay\bin\Debug\FirstDay.exe.config
+E:\Pulpit\vocational-training-master\FirstDay\bin\Debug\FirstDay.exe
+E:\Pulpit\vocational-training-master\FirstDay\bin\Debug\FirstDay.pdb

@@ -1,107 +1,97 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace FirstDay
 {
-    class ImageConverter
+    public class ImageConverter
     {
-        public object testt;
+        private string oldFileName, directory, txtEx, extension, line, gifVarAH, gifVarBH, pngH, jpgEx, jpgH, gifEx, pngEx, rarFourEx, rarFourH, rarH, rarEx, webpH, webpEx, tiffH, tiffEx, bmpH, bmpEx, zipH, zipEx;
 
-        static public void Convert(string path)
+        public void Convert(string path)
         {
-
-            if (Program.extension != Program.txtEx) //when the file isn't text file
+            if (extension != txtEx) //when the file isn't text file
             {
                 Console.Write("Please, enter a new name for the file: ");
                 string newNameFile = Console.ReadLine(); //the user provides the new name for the file
-                switch (Program.extension)
+                switch (extension)
                 {
-                    case ".gif":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".gif": //gif to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".png":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".png": //png to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".jpg":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".jpg": //jpg to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".webp":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".webp": //webp to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".tiff":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".tiff": //tiff to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".bmp":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".bmp": //bmp to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".zip":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".zip": //zip to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-                    case ".rar":
-                        File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.txtEx); //the program changes the path (in this case, no) and name of the file
+                    case ".rar": //rar to txt
+                        File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + txtEx);
                         break;
-
                 }
                 Console.WriteLine("Done!");
-            }
 
-            else if (Program.extension == Program.txtEx) //when the file is text
+            } else if (extension == txtEx)
             {
                 Console.Write("Please, enter a new name for the file: ");
-                string newNameFile = Console.ReadLine(); //the user provides the new name for the file
+                string newNameFile = Console.ReadLine(); 
 
-                if (Program.line.StartsWith(Program.gifVarAH)) //when file is gif type
+                if (line.StartsWith(gifVarAH)) //when file is gif type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.gifEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + gifEx); 
                 }
-                else if (Program.line.StartsWith(Program.gifVarBH)) //when file is gif type
+                else if (line.StartsWith(gifVarBH)) //when file is gif type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.gifEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + gifEx); 
                 }
-                else if (Program.line.StartsWith(Program.pngH)) //when file is png type
+                else if (line.StartsWith(pngH)) //when file is png type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.pngEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + pngEx); 
                 }
-                else if (Program.line.StartsWith("˙Ř˙")) //when file is jpg type
+                else if (line.StartsWith(jpgH)) //when file is jpg type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.jpgEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + jpgEx); 
                 }
-                else if (Program.line.StartsWith(Program.webpH)) //when file is webp type
+                else if (line.StartsWith(webpH)) //when file is webp type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.webpEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + webpEx); 
                 }
-                else if (Program.line.StartsWith(Program.tiffH)) //when file is tiff type
+                else if (line.StartsWith(tiffH)) //when file is tiff type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.tiffEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + tiffEx); 
                 }
-                else if (Program.line.StartsWith(Program.bmpH)) //when file is bmp type
+                else if (line.StartsWith(bmpH)) //when file is bmp type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.bmpEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + bmpEx); 
                 }
-                else if (Program.line.StartsWith(Program.zipH)) //when file is zip type
+                else if (line.StartsWith(zipH)) //when file is zip type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.zipEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + zipEx); 
                 }
-                else if (Program.line.StartsWith(Program.rarH)) //when file is rar type
+                else if (line.StartsWith(rarH)) //when file is rar type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.rarEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + rarEx); 
                 }
-                else if (Program.line.StartsWith(Program.rarFourH)) //when file is rar4 type
+                else if (line.StartsWith(rarFourH)) //when file is rar4 type
                 {
-                    File.Move(Program.directory + "/" + Program.oldFileName, Program.directory + "/" + newNameFile + Program.rarEx); //the program changes the path (in this case, no) and name of the file
+                    File.Move(directory + "/" + oldFileName, directory + "/" + newNameFile + rarFourEx);
                 }
                 Console.WriteLine("Done!");
-                //else
-                //{
-                //    Console.WriteLine("ERR0R!! Incorrect data was entered");
-                //}
-                Console.ReadKey();
-
             }
         }
     }
 }
+
+
