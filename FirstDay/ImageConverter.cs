@@ -1,19 +1,47 @@
 ﻿using System;
 using System.IO;
-
+using System.Linq;
 
 namespace FirstDay
 {
     public class ImageConverter
     {
-        private string oldFileName, directory, txtEx, extension, line, gifVarAH, gifVarBH, pngH, jpgEx, jpgH, gifEx, pngEx, rarFourEx, rarFourH, rarH, rarEx, webpH, webpEx, tiffH, tiffEx, bmpH, bmpEx, zipH, zipEx;
+        // the program assigns constant values for text and pictures files
+        string gifEx = ".gif";
+        string pngEx = ".png";
+        string jpgEx = ".jpg";
+        string webpEx = ".webp";
+        string tiffEx = ".tiff";
+        string bmpEx = ".bmp";
+        string zipEx = ".zip";
+        string rarEx = ".rar";
+        string rarFourEx = ".rar";
+        string txtEx = ".txt";
+
+        // headers files
+        string gifVarAH = "GIF87a";
+        string gifVarBH = "GIF89a";
+        string pngH = "PNG";
+        string jpgH = "˙Ř˙ŕ";
+        string webpH = "RIFF";
+        string tiffH = "䥉*";
+        string bmpH = "BMŠ";
+        string zipH = "PK";
+        string rarH = "慒ⅲ";
+        string rarFourH = "Rar!";
 
         public void Convert(string path)
         {
+            //the program extracts the necessary data from path
+            string directory = Path.GetDirectoryName(path);
+            string oldFileName = Path.GetFileName(path);
+            string extension = Path.GetExtension(path);
+            var line = File.ReadLines(path).First();
+            Console.Write("Please, enter a new name for the file: ");
+            string newNameFile = Console.ReadLine();
+
             if (extension != txtEx) //when the file isn't text file
             {
-                Console.Write("Please, enter a new name for the file: ");
-                string newNameFile = Console.ReadLine(); //the user provides the new name for the file
                 switch (extension)
                 {
                     case ".gif": //gif to txt
@@ -45,8 +73,6 @@ namespace FirstDay
 
             } else if (extension == txtEx)
             {
-                Console.Write("Please, enter a new name for the file: ");
-                string newNameFile = Console.ReadLine(); 
 
                 if (line.StartsWith(gifVarAH)) //when file is gif type
                 {

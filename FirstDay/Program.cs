@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 
 namespace FirstDay
 {
@@ -15,17 +13,25 @@ namespace FirstDay
 
             //the user provides the path to the file
             Console.Write("Please, enter the path to the file: ");
-
             string path = Console.ReadLine();
+            ImageConverter Convert = new ImageConverter();
+            Convert.Convert(path);
 
-            //the program extracts the necessary data from path
-            string directory = Path.GetDirectoryName(path);
-            string oldFileName = Path.GetFileName(path);
-            string extension = Path.GetExtension(path);
-
-            var line = File.ReadLines(path).First();
-
-            ImageConverter ConvertTo = new ImageConverter();
+            for (int i = 0; i >= 0; i++)
+            {
+                Console.WriteLine("Do you want to convert another file (Y/N)");
+                if (Console.ReadKey().Key == ConsoleKey.Y)
+                {
+                    Console.WriteLine("  soo let's go...");
+                    Console.Write("Please, enter the path to the file: ");
+                    path = Console.ReadLine();
+                    Convert.Convert(path);
+                }
+                else if (Console.ReadKey().Key == ConsoleKey.N)
+                {
+                    Console.WriteLine("Okay, Thank you for using our program ^^");
+                }
+            }
         }
     }
 }
